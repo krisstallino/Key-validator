@@ -10,20 +10,22 @@
 На тестирование затрачено: 8 часов
 
 В результате тестирования выявлены следующие дефекты:
-* [Issue #1](https://github.com/krisstallino/Key-validator/issues/1#issue-907352947)
-* [Issue #2](https://github.com/krisstallino/Key-validator/issues/2#issue-907375612)
+* [19 символьный номер карты не проходит валидацию](https://github.com/krisstallino/Key-validator/issues/1#issue-907352947)
+* [15 символьный номер карты не проходит валидацию](https://github.com/krisstallino/Key-validator/issues/2#issue-907375612)
 
 ## Описание процесса тестирования
 
 В процессе тестирования использовались следующие артефакты:
 * [тест кейсы](https://docs.google.com/spreadsheets/d/1lVneSGsB50Slpu5xiSca-b3tEWf0ZOBDQ9I--tkCmxU/edit?usp=sharing)
-* [баг репорты](https://github.com/krisstallino/Key-validator/issues)
+
 
 В качестве тестовых данных использовались данные [FreeFormatter.com](https://www.freeformatter.com/credit-card-number-generator-validator.html):
 #### карты МПС Visa:
 * 4913622613868495 - Result is OK  
 * 4916360047732956 - Result is OK  
 * 4716789056801365699 - Result is FAIL
+* 4929220919458681039 - Result is FAIL  
+* 4778242114200664831 - Result is FAIL  
 
 #### карты МПС Visa Electron
 * 4175007288091248 - Result is OK  
@@ -37,6 +39,7 @@
 #### карты МПС American Express (AMEX)
 * 344736977074792 - Result is FAIL  
 * 349246228233473 - Result is FAIL
+* 375342190293558 - Result is FAIL  
 
 #### карты МПС Maestro
 * 6304410309485523 - Result is OK  
